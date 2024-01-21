@@ -1,0 +1,7 @@
+Congratulations!
+
+You successfully installed the infrastructure required to run VOLTHA.
+
+Here are some commands to expose services:
+
+Kibana: kubectl port-forward -n {{ .Release.Namespace }} --address 0.0.0.0 svc/{{ .Release.Name }}-kibana 5601

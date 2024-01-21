@@ -1,0 +1,30 @@
+apiVersion: v2
+appVersion: "2.11"
+dependencies:
+- condition: efk.enabled
+  name: elasticsearch
+  repository: https://helm.elastic.co
+  version: 7.10.1
+- condition: efk.enabled
+  name: kibana
+  repository: https://helm.elastic.co
+  version: 7.10.1
+- condition: efk.enabled
+  name: fluentd-elasticsearch
+  repository: https://kiwigrid.github.io
+  version: 9.6.2
+description: A Helm chart to install the required infrastructure for VOLTHA
+home: https://www.opennetworking.org/voltha
+icon: https://guide.opencord.org/logos/voltha.svg
+keywords:
+- onf
+- voltha
+- onos
+- radius
+- sadis-server
+maintainers:
+- email: info@opennetworking.org
+  name: Open Networking Foundation
+  url: https://www.opennetworking.org
+name: voltha-infra
+version: 2.12.1
